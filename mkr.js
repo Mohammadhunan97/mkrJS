@@ -16,11 +16,10 @@ doc.getByClass = function(element,n){
 	return doc.getElementsByClassName(element)[n];
 }
 
-
 function getRand(max,min,except){   //inclusive inclusive
   
-  min = Math.round(min);
-  max = Math.round(max)+1;
+  min = Math.round(min) || 0;
+  max = Math.round(max)+1 || 100;
   let tempmax = max-1;
   let tempmin = min;
   let tempexc = except;
