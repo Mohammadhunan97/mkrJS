@@ -31,3 +31,19 @@ function getRand(max,min,except){   //inclusive inclusive
   }
 
 }
+
+function Sort(array){
+  let topnum = array.length -1; 
+  let random;
+  let temp;
+  while(topnum>0){
+    random = getRand(topnum,0,topnum);
+    temp = array[topnum];
+    array[topnum] = array[random];
+    array[random] = temp;
+    topnum--;
+    if(topnum === 1){
+      return array;
+    }
+  }
+}
