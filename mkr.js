@@ -47,3 +47,10 @@ function Sort(array){
     }
   }
 }
+
+
+function overlap(firstobj,secondobj){
+  if((firstobj.style.top >= secondobj.style.top && firstobj.style.top <= secondobj.style.top + secondobj.style.height)&&(firstobj.style.left >= secondobj.style.left && firstobj.style.left <= secondobj.style.left + secondobj.style.width)){
+    console.log('collided');
+  }//end of if
+}
