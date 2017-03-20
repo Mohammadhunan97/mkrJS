@@ -54,3 +54,15 @@ function overlap(firstobj,secondobj){
     console.log('collided');
   }//end of if
 }
+
+/* USE return others when you have an array index value which you don't want to use and want to use the other elements*/
+/*Return others returns a new array of elements which are not the index you do not want */
+function returnOthers(arr,index){
+let temp = [];
+for(a = 0; a < arr.length; a++){
+  if(a !== index){
+    temp.push(a);
+  }
+}
+return temp;
+}
