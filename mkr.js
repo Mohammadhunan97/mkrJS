@@ -66,3 +66,16 @@ for(a = 0; a < arr.length; a++){
 }
 return temp;
 }
+
+function Queue(array){
+	this.queue = array;
+	this.length = array.length;
+}
+Queue.prototype.addNewItem(newItem){
+	this.queue.push(newItem);
+	this.length += 1;
+}
+Queue.prototype.deQueue(){
+	this.Queue.shift();
+	this.length -=1;
+}
