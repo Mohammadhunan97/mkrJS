@@ -79,3 +79,8 @@ Queue.prototype.deQueue(){
 	this.Queue.shift();
 	this.length -=1;
 }
+//test:
+Array.prototype.queue = function(arr){
+	this.queue = array;
+	this.length = array.length;
+}
