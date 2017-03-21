@@ -84,3 +84,8 @@ Array.prototype.queue = function(arr){
 	this.queue = array;
 	this.length = array.length;
 }
+
+/*Taken from stack overflow, lines 89 to 91 http://stackoverflow.com/questions/1026069/how-do-i-make-the-first-letter-of-a-string-uppercase-in-javascript*/ 
+String.prototype.capitalizeFirstLetter = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
