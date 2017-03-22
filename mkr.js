@@ -1,5 +1,5 @@
 let me = this; // easy to edit window object
-let doc = document;
+let doc = document; 
 doc.make = function(element){
 	return doc.createElement(element);
 }
