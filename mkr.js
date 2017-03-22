@@ -98,4 +98,46 @@ function find_middle_index(arr){
 Array.prototype.midIndex = function(){
 	return (Math.floor(this.length/2));
 }
+Array.prototype.midIndex = function(){
+	return (Math.floor(this.length/2));
+};
 
+
+
+//BINARY SEARCH:
+
+Array.prototype.binary = function(value){ //503 ->
+  callStack = 0;
+  callStack++;
+   let mid = (Math.floor(this.length/2)); //4(4): 2(240)
+   let midMinus1 = mid - 1; //3:1
+   let midPlus1 = mid + 1;//5: 3
+     let temp = []; // []:
+     if(callStack > this.length){ //false
+        return 'value is not available';
+      }
+     if(this[midMinus1] === value){
+       return 'foo';
+     }
+     if(this[midPlus1] === value){
+       return 'bar';
+     }
+     if(this[mid] === value){ // false: false
+       return 'foobar';
+     }
+     if(this[mid] > value){ //false : false
+         	for(let a = 0; a < midMinus1; a++){
+       		    temp[a] = this[a];
+         	}
+       	return temp.binary(value);
+       }
+      if(mid < value){ //true : true
+        	for(let a = midPlus1; a < this.length; a++){
+       		   temp.push(this[a]);
+         	}
+         	return temp.binary(value); //(5.89.240.503):
+      }
+};
+// [0,1,2,3,4,5,89,240,503].midIndex();
+console.log([0,1,2,3,4,5,89,240,503].binary(240));
+//console.log([5,89,240,503].midIndex());
