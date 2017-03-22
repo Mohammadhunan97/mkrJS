@@ -106,38 +106,42 @@ Array.prototype.midIndex = function(){
 
 //BINARY SEARCH:
 
-Array.prototype.binary = function(value){ //503 ->
-  callStack = 0;
+Array.prototype.midIndex = function(){
+	return (Math.floor(this.length/2));
+};
+Array.prototype.search = function(value){ //503 ->
+ let callStack = 0;
   callStack++;
+  
    let mid = (Math.floor(this.length/2)); //4(4): 2(240)
    let midMinus1 = mid - 1; //3:1
    let midPlus1 = mid + 1;//5: 3
      let temp = []; // []:
      if(callStack > this.length){ //false
-        return 'value is not available';
+        return false;
       }
      if(this[midMinus1] === value){
-       return 'foo';
+       return true;
      }
      if(this[midPlus1] === value){
-       return 'bar';
+       return true;
      }
      if(this[mid] === value){ // false: false
-       return 'foobar';
+       return true;
      }
      if(this[mid] > value){ //false : false
          	for(let a = 0; a < midMinus1; a++){
        		    temp[a] = this[a];
          	}
-       	return temp.binary(value);
+       	return temp.searc(value);
        }
       if(mid < value){ //true : true
         	for(let a = midPlus1; a < this.length; a++){
        		   temp.push(this[a]);
          	}
-         	return temp.binary(value); //(5.89.240.503):
+         	return temp.search(value); //(5.89.240.503):
       }
 };
 // [0,1,2,3,4,5,89,240,503].midIndex();
-console.log([0,1,2,3,4,5,89,240,503].binary(240));
+console.log([0,1,2,3,4,5,89,240,503].search(240));
 //console.log([5,89,240,503].midIndex());
