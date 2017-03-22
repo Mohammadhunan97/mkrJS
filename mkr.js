@@ -93,3 +93,9 @@ String.prototype.capitalizeFirstLetter = function() {
 function find_middle_index(arr){
 	return (Math.floor(arr.length/2));
 }
+
+/* BUILT in Array method version of find_middle_index */
+Array.prototype.myMidIndex = function(){
+	return (Math.floor(this.length/2));
+}
+
