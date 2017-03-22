@@ -89,3 +89,7 @@ Array.prototype.queue = function(arr){
 String.prototype.capitalizeFirstLetter = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 }
+
+function find_middle_index(arr){
+	return (Math.floor(arr.length/2));
+}
