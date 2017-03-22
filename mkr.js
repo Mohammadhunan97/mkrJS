@@ -95,7 +95,7 @@ function find_middle_index(arr){
 }
 
 /* BUILT in Array method version of find_middle_index */
-Array.prototype.myMidIndex = function(){
+Array.prototype.midIndex = function(){
 	return (Math.floor(this.length/2));
 }
 
