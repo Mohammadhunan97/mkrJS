@@ -1,3 +1,5 @@
+let c = console;
+c.log('foobar');
 let me = this; // easy to edit window object
 let doc = document; 
 doc.make = function(element){
