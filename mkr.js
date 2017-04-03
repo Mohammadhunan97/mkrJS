@@ -147,3 +147,15 @@ Array.prototype.search = function(value){ //503 ->
 // [0,1,2,3,4,5,89,240,503].midIndex();
 console.log([0,1,2,3,4,5,89,240,503].search(240));
 //console.log([5,89,240,503].midIndex());
+
+// for Each for strings
+String.prototype.forEach = function(funct){
+  for(let i = 0; i < this.length;i++){
+    funct(this[i]);
+  }
+};
+
+"foobar".forEach(function(char){
+  console.log(char.toUpperCase());
+});
+
