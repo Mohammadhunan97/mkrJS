@@ -159,3 +159,8 @@ String.prototype.forEach = function(funct){
   console.log(char.toUpperCase());
 });
 
+function rand(arr){
+  return arr[getRand(arr.length-1,0)];
+}
+
+rand([1,2,99,405,108]);
